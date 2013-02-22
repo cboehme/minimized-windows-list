@@ -124,13 +124,12 @@ const MinWinListIndicator = new Lang.Class({
 	},
 	
 	_addWorkspaceWindows: function(workspace) {
-		// Appends all minimised windows on `workspace` to the menu
-		
+		// Appends all minimised windows on `workspace` to the menu		
 		let tracker = Shell.WindowTracker.get_default();
 		let windows = workspace.list_windows();
 		
 		for (let i = 0; i < windows.length; ++i) {
-			if (windows[i].minimized) {
+			if (!windows[i].showing_on_its_workspace()) {
 				let appWin = tracker.get_window_app(windows[i]);
 				let appIcon = appWin.create_icon_texture(22);
 				let appName = appWin.get_name();
