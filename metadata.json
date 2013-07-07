@@ -3,6 +3,6 @@
 	"name": "Minimized Windows List",
 	"description": "Adds an icon to the top bar showing a list of minimized windows",
 	"url": "http://github.com/Xoff/minimized-windows-list",
-	"shell-version": ["3.6"], 
-	"version": 2
+	"shell-version": ["3.8"], 
+	"version": 3
 }
