@@ -37,7 +37,7 @@ MinWinListExtension.prototype = {
 	enable: function() {
 		if (this._indicator === null) {
 			this._indicator = new MinWinListIndicator();
-			Main.panel.addToStatusArea("minimized-window-list", this._indicator);
+			Main.panel.addToStatusArea("minimized-window-list", this._indicator, 1);
 		}
 	},
 	
@@ -64,7 +64,7 @@ const MinWinListMenuItem = new Lang.Class({
 		let box = new St.BoxLayout({ style_class: 'popup-combobox-item' });		
 		box.add(icon);
 		box.add(new St.Label({ text: text }));
-		this.addActor(box);
+		this.actor.add(box);
 		
 		this.connect('activate', Lang.bind(this, this._restoreWindow));
 	},
@@ -81,10 +81,16 @@ const MinWinListMenuItem = new Lang.Class({
 const MinWinListIndicator = new Lang.Class({
 
 	Name: 'MinWinListIndicator',
-	Extends: PanelMenu.SystemStatusButton,
+	Extends: PanelMenu.Button,
 
 	_init: function() {
-		this.parent('view-list-symbolic', _("Minimized Windows List"));
+		this.parent(0.0, _("Minimized Windows List"), false);
+		let hbox = new St.BoxLayout({ style_class: 'panel-status-menu-box' });
+		let icon = new St.Icon({ icon_name: 'view-list-symbolic',
+			style_class: 'system-status-icon' });
+
+        hbox.add_child(icon);
+        this.actor.add_child(hbox);
 		
 		this._restackedId = global.screen.connect('restacked', 
 				Lang.bind(this, this._updateWindowList));
