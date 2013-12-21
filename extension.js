@@ -4,7 +4,7 @@
 	A Gnome-Shell extension which adds an icon to the 
 	top panel showing a list of minimized windows
 		
-	http://github.com/Xoff/minimized-windows-list
+	http://github.com/cboehme/minimized-windows-list
 	
 	(C) 2013 Christoph Böhme <christoph@b3e.net>
 	
