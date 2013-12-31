@@ -1,5 +1,5 @@
 /*
-	Minimized Windows List (Version 3)
+	Minimized Windows List (Version 5)
 	
 	A Gnome-Shell extension which adds an icon to the 
 	top panel showing a list of minimized windows
