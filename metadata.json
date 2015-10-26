@@ -2,7 +2,13 @@
 	"uuid": "MinimizedWindowsList@b3e.net", 
 	"name": "Minimized Windows List",
 	"description": "Adds an icon to the top bar showing a list of minimized windows",
-	"url": "http://github.com/cboehme/minimized-windows-list",
-	"shell-version": ["3.10"], 
-	"version": 5
+	"url": "https://github.com/cboehme/minimized-windows-list",
+	"shell-version": [
+		"3.10",
+		"3.12",
+		"3.14",
+		"3.16",
+		"3.18"
+	],
+	"version": 6
 }

@@ -7,3 +7,14 @@ active workspace are listed first. Clicking on a menu item restores the window a
 to the workspace it is on.
 
 ![screenshot](https://github.com/cboehme/minimized-windows-list/raw/master/screenshot.png)
+
+Install Instructions
+======================
+
+```
+git clone git@github.com:ElectricPrism/minimized-windows-list.git
+```
+
+```
+mv minimized-windows-list ~/.local/share/gnome-shell/extensions/MinimizedWindowsList@b3e.net
+```
